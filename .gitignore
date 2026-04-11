@@ -1,0 +1,6 @@
+node_modules/
+temporary screenshots/
+screenshot-deep.mjs
+screenshot-id.mjs
+screenshot-section.mjs
+.vscode/
