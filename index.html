@@ -298,6 +298,7 @@
       <a href="#movement" class="nav-link">Movement</a>
       <a href="#fiveam"   class="nav-link">5 AM Club</a>
       <a href="#book"     class="nav-link">Book</a>
+      <a href="#inquiry"  class="nav-link">Contact</a>
       <a href="#movement" class="btn-gold py-2.5 px-6 text-sm ml-2">Join Now</a>
     </div>
 
@@ -315,6 +316,7 @@
     <a href="#movement" class="block nav-link py-3 border-b border-white/10">Movement</a>
     <a href="#fiveam"   class="block nav-link py-3 border-b border-white/10">5 AM Club</a>
     <a href="#book"     class="block nav-link py-3 border-b border-white/10">Book</a>
+    <a href="#inquiry"  class="block nav-link py-3 border-b border-white/10">Contact</a>
     <a href="#movement" class="btn-gold block text-center mt-4">Join Now</a>
   </div>
 </nav>
@@ -375,6 +377,86 @@
           </div>
         </div>
       </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     1b · QUIZ / TEST CARDS
+════════════════════════════════════════ -->
+<style>
+  .quiz-card {
+    display:block;
+    text-decoration:none;
+    border-radius:16px;
+    padding:32px 28px;
+    transition:transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .quiz-card::before {
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:16px;
+    opacity:0;
+    transition:opacity .3s ease;
+  }
+  .quiz-card:hover { transform:translateY(-6px); }
+  .quiz-card:hover::before { opacity:1; }
+  .quiz-card-light { background:var(--light-bg); border:2px solid rgba(244,178,58,.25); box-shadow:0 4px 24px rgba(31,58,95,.08); }
+  .quiz-card-light:hover { box-shadow:0 16px 48px rgba(31,58,95,.16),0 0 0 2px rgba(244,178,58,.5); }
+  .quiz-card-dark { background:var(--navy-dark); border:2px solid rgba(244,178,58,.2); box-shadow:0 4px 24px rgba(0,0,0,.25); }
+  .quiz-card-dark:hover { box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 2px rgba(244,178,58,.55); }
+</style>
+
+<section id="quizzes" style="background:#fff;padding:56px 0 48px;border-bottom:1px solid rgba(31,58,95,.08);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10 reveal">
+      <span style="display:inline-block;background:rgba(244,178,58,.12);color:var(--gold-dark);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:12px;">Free Self-Discovery Tests</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--navy-dark);margin:0;line-height:1.25;">Know Yourself. Choose Better. <span style="color:var(--gold-dark);">Succeed Faster.</span></h2>
+      <p style="color:#64748b;font-size:1rem;margin-top:10px;max-width:520px;margin-left:auto;margin-right:auto;">Two quick tests designed to reveal your strengths and guide your next step.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 lg:gap-7" style="max-width:860px;margin:0 auto;">
+
+      <!-- Card 1: Parents Test -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfH43F8vGYRRg18d6AytICkDtMWAtsT6gPmCBQHWEpQyCJxNg/viewform?usp=header"
+         target="_blank" rel="noopener"
+         class="quiz-card quiz-card-light reveal">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(244,178,58,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span style="background:var(--gold);color:var(--navy-dark);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px;">पालकांसाठी</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;color:var(--navy-dark);margin:0 0 10px;line-height:1.3;">बारावी उत्तीर्ण विद्यार्थ्यांच्या<br>पालकांसाठी चाचणी</h3>
+        <p style="color:#475569;font-size:.92rem;line-height:1.6;margin:0 0 20px;">आपल्या मुलाच्या करिअरसाठी योग्य दिशा निवडण्यात मदत करणारी ही चाचणी — फक्त 5 मिनिटे.</p>
+        <div style="display:inline-flex;align-items:center;gap:8px;color:var(--navy-dark);font-weight:700;font-size:.92rem;">
+          चाचणी द्या
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <!-- Card 2: Students Career Quiz -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6OKU7194mN699Zi3z2CERSpD1Prw3cfhy3Ufst2QB8phFlg/viewform"
+         target="_blank" rel="noopener"
+         class="quiz-card quiz-card-dark reveal delay-1">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(244,178,58,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="26" height="26" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#F4B23A" stroke-width="2"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="#F4B23A" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <span style="background:var(--gold);color:var(--navy-dark);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px;">विद्यार्थ्यांसाठी</span>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;color:#fff;margin:0 0 10px;line-height:1.3;">करिअर आणि शिकण्याची पद्धत:<br><span style="color:var(--gold);">सेल्फ-डिस्कव्हरी क्विझ</span></h3>
+        <p style="color:rgba(255,255,255,.72);font-size:.92rem;line-height:1.6;margin:0 0 20px;">तुमची शिकण्याची पद्धत, करिअरची दिशा आणि ताकद जाणून घ्या — Career & Learning Style Self-Discovery Quiz.</p>
+        <div style="display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-weight:700;font-size:.92rem;">
+          क्विझ द्या
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
 
     </div>
   </div>
@@ -619,7 +701,7 @@
           </ul>
         </div>
 
-        <a href="#" class="btn-gold btn-pulse">Get the Book →</a>
+        <button onclick="openEbookModal()" class="btn-gold btn-pulse" style="border:none;cursor:pointer;">Get the Book →</button>
       </div>
 
     </div>
@@ -893,6 +975,81 @@
 
 
 <!-- ═══════════════════════════════════════
+     11b · INQUIRY FORM
+════════════════════════════════════════ -->
+<section id="inquiry" style="background:var(--light-bg);padding:80px 0;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+      <!-- Left copy -->
+      <div class="reveal">
+        <span style="display:inline-block;background:rgba(244,178,58,.12);color:var(--gold-dark);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:16px;">Get in Touch</span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--navy-dark);line-height:1.2;margin:0 0 16px;">Have a Question?<br><span style="color:var(--gold-dark);">We're Here to Help.</span></h2>
+        <p style="color:#475569;font-size:1rem;line-height:1.75;margin:0 0 28px;">Whether you're a student, parent, or educator — reach out and our team will get back to you within 24 hours.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(244,178,58,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:700;color:var(--navy-dark);margin:0 0 2px;font-size:.95rem;">Call / WhatsApp</p>
+              <p style="color:#64748b;font-size:.9rem;margin:0;">Reach out to our team directly</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(244,178,58,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:700;color:var(--navy-dark);margin:0 0 2px;font-size:.95rem;">Email Us</p>
+              <p style="color:#64748b;font-size:.9rem;margin:0;">trainer3.pes@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right form -->
+      <div class="reveal delay-1" style="background:#fff;border-radius:20px;padding:36px 32px;box-shadow:0 8px 40px rgba(31,58,95,.1);border:1px solid rgba(31,58,95,.06);">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy-dark);margin:0 0 24px;">Send an Inquiry</h3>
+        <form id="inquiryForm" onsubmit="submitInquiry(event)" style="display:flex;flex-direction:column;gap:16px;">
+          <div>
+            <label style="display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px;">Full Name *</label>
+            <input type="text" name="name" required placeholder="Your name"
+              style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.95rem;color:var(--navy-dark);outline:none;transition:border-color .2s;box-sizing:border-box;"
+              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#e2e8f0'" />
+          </div>
+          <div>
+            <label style="display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px;">Phone Number *</label>
+            <input type="tel" name="phone" required placeholder="10-digit mobile number"
+              style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.95rem;color:var(--navy-dark);outline:none;transition:border-color .2s;box-sizing:border-box;"
+              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#e2e8f0'" />
+          </div>
+          <div>
+            <label style="display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px;">Email</label>
+            <input type="email" name="email" placeholder="your@email.com"
+              style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.95rem;color:var(--navy-dark);outline:none;transition:border-color .2s;box-sizing:border-box;"
+              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#e2e8f0'" />
+          </div>
+          <div>
+            <label style="display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px;">Your Message / Query *</label>
+            <textarea name="message" required rows="3" placeholder="What would you like to know?"
+              style="width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.95rem;color:var(--navy-dark);outline:none;transition:border-color .2s;resize:vertical;box-sizing:border-box;"
+              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#e2e8f0'"></textarea>
+          </div>
+          <button type="submit" class="btn-gold" id="inquirySubmitBtn"
+            style="width:100%;padding:14px;font-size:1rem;border:none;cursor:pointer;border-radius:10px;margin-top:4px;">
+            Send Inquiry →
+          </button>
+          <p id="inquiryMsg" style="display:none;text-align:center;font-size:.9rem;color:#16a34a;font-weight:600;">✓ Message sent! We'll get back to you soon.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
      12 · FINAL CTA
 ════════════════════════════════════════ -->
 <section class="final-cta" style="padding:120px 0;">
@@ -1018,6 +1175,156 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   revealEls.forEach(el => revealObserver.observe(el));
+</script>
+
+<!-- ═══════════════════════════════════════
+     EBOOK LEAD-CAPTURE MODAL
+════════════════════════════════════════ -->
+<div id="ebookModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(7,15,28,.75);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;">
+  <div style="background:#fff;border-radius:20px;width:100%;max-width:460px;padding:36px 32px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.35);">
+    <!-- Close -->
+    <button onclick="closeEbookModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;color:#94a3b8;font-size:1.5rem;line-height:1;" aria-label="Close">×</button>
+
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="width:56px;height:56px;border-radius:14px;background:rgba(244,178,58,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+        <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="#F4B23A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;color:var(--navy-dark);margin:0 0 6px;">Get Your Free eBook</h3>
+      <p style="color:#64748b;font-size:.88rem;margin:0;">तुमचा करिअर मंत्र शोधा — Enter your details to download instantly.</p>
+    </div>
+
+    <form id="ebookForm" onsubmit="submitEbookForm(event)" style="display:flex;flex-direction:column;gap:14px;">
+      <div>
+        <label style="display:block;font-size:.83rem;font-weight:600;color:var(--navy);margin-bottom:5px;">Full Name *</label>
+        <input type="text" name="name" required placeholder="Your name"
+          style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.93rem;color:var(--navy-dark);outline:none;transition:border-color .2s;box-sizing:border-box;"
+          onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#e2e8f0'" />
+      </div>
+      <div>
+        <label style="display:block;font-size:.83rem;font-weight:600;color:var(--navy);margin-bottom:5px;">Phone Number *</label>
+        <input type="tel" name="phone" required placeholder="10-digit mobile number"
+          style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.93rem;color:var(--navy-dark);outline:none;transition:border-color .2s;box-sizing:border-box;"
+          onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#e2e8f0'" />
+      </div>
+      <div>
+        <label style="display:block;font-size:.83rem;font-weight:600;color:var(--navy);margin-bottom:5px;">Location (City) *</label>
+        <input type="text" name="location" required placeholder="e.g. Pune, Mumbai, Nashik"
+          style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:.93rem;color:var(--navy-dark);outline:none;transition:border-color .2s;box-sizing:border-box;"
+          onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='#e2e8f0'" />
+      </div>
+      <button type="submit" id="ebookSubmitBtn" class="btn-gold"
+        style="width:100%;padding:13px;font-size:1rem;border:none;cursor:pointer;border-radius:10px;margin-top:4px;">
+        Download Free eBook →
+      </button>
+      <p id="ebookMsg" style="display:none;text-align:center;font-size:.88rem;color:#16a34a;font-weight:600;">✓ Downloading your eBook…</p>
+    </form>
+  </div>
+</div>
+
+<script>
+// ── GOOGLE SHEETS WEBHOOK URLS ──────────────────────────────────────────────
+// SETUP INSTRUCTIONS:
+// 1. Open Google Sheets → Extensions → Apps Script
+// 2. Paste the doPost(e) script below, deploy as Web App (Anyone can access)
+// 3. Copy the Web App URL and replace the placeholder below
+//
+// Apps Script template (doPost):
+// function doPost(e){
+//   var data = JSON.parse(e.postData.contents);
+//   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+//   sheet.appendRow([new Date(), data.name, data.phone, data.location||'', data.email||'', data.message||'', data.source]);
+//   return ContentService.createTextOutput("OK");
+// }
+
+var EBOOK_WEBHOOK    = 'https://script.google.com/macros/s/AKfycbx1BZXppS3_XWqn7G2bn7BfojaZ3lIdJLd_GuDk3TeRLysDf-p78YVyty0I6ZzPrxr0/exec';
+var INQUIRY_WEBHOOK  = 'https://script.google.com/macros/s/AKfycbzS7mT-AuANM5d5ZcMUMluD3gpET3iyIprqA_9RacEiY7hlE8iLZxmQJsi8F_vJ3khB/exec';
+
+// ── EBOOK MODAL ──────────────────────────────────────────────────────────────
+function openEbookModal() {
+  var modal = document.getElementById('ebookModal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeEbookModal() {
+  var modal = document.getElementById('ebookModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('ebookModal').addEventListener('click', function(e) {
+  if (e.target === this) closeEbookModal();
+});
+
+function submitEbookForm(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = document.getElementById('ebookSubmitBtn');
+  var msg = document.getElementById('ebookMsg');
+  btn.textContent = 'Submitting…';
+  btn.disabled = true;
+
+  var payload = {
+    name:     form.name.value,
+    phone:    form.phone.value,
+    location: form.location.value,
+    source:   'ebook_download'
+  };
+
+  // Send to Google Sheet (fire-and-forget; download proceeds regardless)
+  if (EBOOK_WEBHOOK && EBOOK_WEBHOOK !== 'YOUR_EBOOK_GOOGLE_APPS_SCRIPT_URL_HERE') {
+    fetch(EBOOK_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(function(){});
+  }
+
+  // Trigger PDF download
+  msg.style.display = 'block';
+  var link = document.createElement('a');
+  link.href = 'marathi%20book%20_%20final.pdf';
+  link.download = 'Career Mantra - Sanmit Shah.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  setTimeout(function() {
+    closeEbookModal();
+    form.reset();
+    btn.textContent = 'Download Free eBook →';
+    btn.disabled = false;
+    msg.style.display = 'none';
+  }, 2200);
+}
+
+// ── INQUIRY FORM ─────────────────────────────────────────────────────────────
+function submitInquiry(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = document.getElementById('inquirySubmitBtn');
+  var msg = document.getElementById('inquiryMsg');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  var payload = {
+    name:    form.name.value,
+    phone:   form.phone.value,
+    email:   form.email.value,
+    message: form.message.value,
+    source:  'inquiry_form'
+  };
+
+  var send = (INQUIRY_WEBHOOK && INQUIRY_WEBHOOK !== 'YOUR_INQUIRY_GOOGLE_APPS_SCRIPT_URL_HERE')
+    ? fetch(INQUIRY_WEBHOOK, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
+    : Promise.resolve();
+
+  send.catch(function(){}).finally(function() {
+    msg.style.display = 'block';
+    btn.textContent = 'Send Inquiry →';
+    btn.disabled = false;
+    form.reset();
+  });
+}
 </script>
 
 </body>
