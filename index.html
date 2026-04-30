@@ -1279,14 +1279,9 @@ function submitEbookForm(e) {
     }).catch(function(){});
   }
 
-  // Trigger PDF download
+  // Open eBook on Google Drive
   msg.style.display = 'block';
-  var link = document.createElement('a');
-  link.href = 'marathi%20book%20_%20final.pdf';
-  link.download = 'Career Mantra - Sanmit Shah.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  window.open('https://drive.google.com/file/d/19LzzUgMc6QdAmK0RJsks5lY-VQIU64VC/view?usp=sharing', '_blank');
 
   setTimeout(function() {
     closeEbookModal();
