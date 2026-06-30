@@ -279,6 +279,33 @@
       max-width:300px; z-index:10;
       box-shadow:0 12px 40px rgba(14,42,71,.35);
     }
+
+    /* ── GALLERY MARQUEE ── */
+    @keyframes marqueeLeft  { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+    @keyframes marqueeRight { 0%{transform:translateX(-50%);} 100%{transform:translateX(0);} }
+
+    .gallery-marquee-wrap {
+      overflow:hidden;
+      -webkit-mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+      mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+    .gallery-marquee-inner {
+      display:flex; gap:14px; width:max-content;
+    }
+    .gallery-marquee-inner.scroll-left  { animation:marqueeLeft  55s linear infinite; }
+    .gallery-marquee-inner.scroll-right { animation:marqueeRight 60s linear infinite; }
+    .gallery-marquee-wrap:hover .gallery-marquee-inner { animation-play-state:paused; }
+
+    .gallery-photo {
+      height:240px; width:auto; border-radius:10px;
+      object-fit:cover; flex-shrink:0;
+      transition:transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
+      box-shadow:0 4px 20px rgba(31,58,95,.12);
+    }
+    .gallery-photo:hover {
+      transform:scale(1.05) translateY(-5px);
+      box-shadow:0 16px 40px rgba(31,58,95,.24), 0 0 0 2.5px var(--gold);
+    }
   </style>
 </head>
 <body>
@@ -488,6 +515,87 @@
         <div class="proof-number">100%</div>
         <div class="proof-label">Practical Learning</div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     GALLERY · AWARDS & ACHIEVEMENTS
+════════════════════════════════════════ -->
+<section id="gallery" style="background:#fff;padding:80px 0 72px;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <span class="section-label">Moments &amp; Milestones</span>
+      <h2 class="section-title">Awards &amp; <span>Achievements</span></h2>
+      <div class="gold-divider mx-auto"></div>
+      <p style="color:#4A5568;font-size:16px;line-height:1.75;margin-top:16px;max-width:520px;margin-left:auto;margin-right:auto;">19+ years of impact, recognition, and milestones — captured through every stage of the journey.</p>
+    </div>
+  </div>
+
+  <!-- Row 1 → scrolls left -->
+  <div class="gallery-marquee-wrap" style="margin-bottom:14px;">
+    <div class="gallery-marquee-inner scroll-left">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/152903111_10158008999418193_1181947383319985029_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/203681089_10158264291193193_1067641362940312753_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/301193267_10158954864383193_8472888907603633281_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/36245171_10155648760523193_4162136425824780288_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/468847456_10160830533088193_5810277808527289877_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/484031295_10161105344758193_5602599506241601522_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/487430514_10161161689563193_1406969030790849595_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/489569628_10161190734648193_3715444627115944262_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/489873425_10161190734708193_664094632529750548_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/497599031_10161322571448193_3989300575322687663_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/497846327_10161322275808193_4385067516355977595_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/50293443_2276316222638801_875990079309348864_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/512735389_10161492372388193_6538240480271178498_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <!-- duplicate set for seamless infinite loop -->
+      <img class="gallery-photo" src="sanmit%20sir%20galary/152903111_10158008999418193_1181947383319985029_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/203681089_10158264291193193_1067641362940312753_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/301193267_10158954864383193_8472888907603633281_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/36245171_10155648760523193_4162136425824780288_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/468847456_10160830533088193_5810277808527289877_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/484031295_10161105344758193_5602599506241601522_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/487430514_10161161689563193_1406969030790849595_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/489569628_10161190734648193_3715444627115944262_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/489873425_10161190734708193_664094632529750548_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/497599031_10161322571448193_3989300575322687663_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/497846327_10161322275808193_4385067516355977595_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/50293443_2276316222638801_875990079309348864_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/512735389_10161492372388193_6538240480271178498_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Row 2 → scrolls right -->
+  <div class="gallery-marquee-wrap">
+    <div class="gallery-marquee-inner scroll-right">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/513075140_10161487882188193_4935698908997295708_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/513220589_10161499526413193_8813899553912033130_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/514355042_10161499526398193_377819796034354819_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/514417981_10161543232083193_706898299611974880_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/515756312_10161543089383193_6019916949777813390_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/555573581_10161920266368193_5013628561450850146_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/598437097_10162232543803193_7794353983347223343_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/599932837_10162252728638193_2057071521152723951_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/600295076_10162252728628193_4762565833913469438_n%20%281%29.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/600295076_10162252728628193_4762565833913469438_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/600302253_10162252728623193_8748541405557688617_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/62536012_10156388597893193_2480647521030897664_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/82283725_10156918622533193_2557968777878700032_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <!-- duplicate set for seamless infinite loop -->
+      <img class="gallery-photo" src="sanmit%20sir%20galary/513075140_10161487882188193_4935698908997295708_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/513220589_10161499526413193_8813899553912033130_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/514355042_10161499526398193_377819796034354819_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/514417981_10161543232083193_706898299611974880_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/515756312_10161543089383193_6019916949777813390_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/555573581_10161920266368193_5013628561450850146_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/598437097_10162232543803193_7794353983347223343_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/599932837_10162252728638193_2057071521152723951_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/600295076_10162252728628193_4762565833913469438_n%20%281%29.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/600295076_10162252728628193_4762565833913469438_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/600302253_10162252728623193_8748541405557688617_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/62536012_10156388597893193_2480647521030897664_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
+      <img class="gallery-photo" src="sanmit%20sir%20galary/82283725_10156918622533193_2557968777878700032_n.jpg" alt="Sanmit Shah achievement" loading="lazy">
     </div>
   </div>
 </section>
