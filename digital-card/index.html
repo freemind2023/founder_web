@@ -43,26 +43,26 @@
   }
 
   .bg-decor{ position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0; }
-  .glow{ position:absolute; border-radius:50%; filter:blur(60px); opacity:.4; }
+  .glow{ position:absolute; border-radius:50%; filter:blur(50px); }
   .glow-a{
-    top:-70px; left:-70px; width:260px; height:260px;
+    top:-60px; left:-90px; width:280px; height:280px; opacity:.55;
     background:radial-gradient(circle, var(--gold) 0%, transparent 70%);
-    animation:drift-a 15s ease-in-out infinite;
+    animation:drift-a 9s ease-in-out infinite;
   }
   .glow-b{
-    bottom:-90px; right:-70px; width:320px; height:320px;
-    background:radial-gradient(circle, #2C4E86 0%, transparent 70%);
-    animation:drift-b 19s ease-in-out infinite;
+    top:220px; right:-110px; width:300px; height:300px; opacity:.5;
+    background:radial-gradient(circle, #3E6AAE 0%, transparent 70%);
+    animation:drift-b 11s ease-in-out infinite;
   }
   .glow-c{
-    top:40%; left:50%; width:220px; height:220px; opacity:.16;
+    top:55%; left:50%; width:260px; height:260px; opacity:.3;
     background:radial-gradient(circle, var(--gold-light) 0%, transparent 70%);
-    animation:drift-c 22s ease-in-out infinite;
+    animation:drift-c 13s ease-in-out infinite;
   }
-  @keyframes drift-a{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(34px,42px) scale(1.18); } }
-  @keyframes drift-b{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(-28px,-34px) scale(1.12); } }
-  @keyframes drift-c{ 0%,100%{ transform:translate(-50%,0) scale(1); } 50%{ transform:translate(-50%,-24px) scale(1.1); } }
-  @media (prefers-reduced-motion: reduce){ .glow{ animation:none; } }
+  @keyframes drift-a{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(50px,60px) scale(1.3); } }
+  @keyframes drift-b{ 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(-45px,-50px) scale(1.25); } }
+  @keyframes drift-c{ 0%,100%{ transform:translate(-50%,0) scale(1); } 50%{ transform:translate(-50%,-40px) scale(1.2); } }
+  @media (prefers-reduced-motion: reduce){ .glow{ animation:none; } .photo-ring::before{ animation:none; } }
 
   .content{
     position:relative;
@@ -101,9 +101,10 @@
 
   .photo-ring{
     position:relative;
-    width:140px;
-    height:140px;
+    width:168px;
+    height:168px;
     margin:0 auto 20px;
+    border-radius:50%;
     box-shadow:0 20px 46px -12px rgba(0,0,0,.65);
   }
   .photo-ring::before{
@@ -111,16 +112,19 @@
     position:absolute;
     inset:0;
     border-radius:50%;
-    background:conic-gradient(from 0deg, var(--gold-dark), var(--gold-light), var(--gold), var(--gold-dark));
-    animation:ring-spin 7s linear infinite;
+    background:conic-gradient(from 0deg,
+      var(--gold-dark) 0deg, var(--gold) 70deg, #fff 90deg, var(--gold-light) 110deg,
+      var(--gold-dark) 210deg, var(--gold-dark) 360deg);
+    animation:ring-spin 3.5s linear infinite;
   }
   .photo-ring-inner{
     position:absolute;
-    inset:5px;
+    inset:7px;
     z-index:1;
     border-radius:50%;
     padding:4px;
     background:var(--navy-deep);
+    overflow:hidden;
   }
   .photo-ring img{
     width:100%;
@@ -164,9 +168,12 @@
   /* ---------- Stats ---------- */
   .stats{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:10px;
     padding:0 20px 26px;
+    max-width:280px;
+    margin-inline:auto;
+    width:100%;
   }
   .stat{
     background:linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
@@ -178,7 +185,7 @@
   .stat-num{
     font-family:'Playfair Display',serif;
     font-weight:800;
-    font-size:19px;
+    font-size:21px;
     color:var(--gold-light);
   }
   .stat-label{
@@ -431,10 +438,6 @@
       <div class="stat">
         <p class="stat-num">2000+</p>
         <p class="stat-label">Students</p>
-      </div>
-      <div class="stat">
-        <p class="stat-num">4</p>
-        <p class="stat-label">Global Bodies</p>
       </div>
     </div>
 
