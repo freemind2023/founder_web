@@ -80,24 +80,24 @@
   }
   .brand-row{
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
-    gap:10px;
-    margin-bottom:22px;
+    margin-bottom:20px;
   }
   .brand-badge{
-    width:48px;
-    height:48px;
+    width:112px;
+    height:112px;
     flex-shrink:0;
-    border-radius:13px;
+    border-radius:24px;
     display:flex;
     align-items:center;
     justify-content:center;
+    padding:10px;
     background:linear-gradient(160deg, #ffffff, #E6E9EF);
-    box-shadow:0 10px 22px -8px rgba(0,0,0,.55);
+    box-shadow:0 14px 30px -10px rgba(0,0,0,.6);
   }
-  .brand-logo{ width:36px; height:auto; display:block; }
-  .brand-name{ font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .brand-logo{ width:100%; height:auto; display:block; }
 
   .photo-ring{
     position:relative;
@@ -415,7 +415,6 @@
         <span class="brand-badge">
           <img class="brand-logo" src="../Brand_assests/peslogo.png" alt="Practical Eduskills logo">
         </span>
-        <span class="brand-name">Practical Eduskills</span>
       </div>
 
       <div class="photo-ring">
