@@ -2,200 +2,296 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Sanmit Shah — Digital Business Card</title>
 <meta name="description" content="Official digital business card of Sanmit Shah, Founder, Practical Eduskills.">
+<meta name="theme-color" content="#0A1B33">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#1F3A5F;
-    --navy-dark:#0E2A47;
+    --navy:#132849;
+    --navy-dark:#0A1B33;
+    --navy-deep:#060F1F;
     --gold:#F4B23A;
-    --gold-light:#FFD27A;
-    --gold-dark:#D4941E;
-    --paper:#F6F3EC;
+    --gold-light:#FFD98A;
+    --gold-dark:#C9891F;
+    --ink:#EDEFF3;
+    --muted:rgba(237,239,243,.58);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html,body{height:100%;}
   body{
     font-family:'Inter',sans-serif;
-    min-height:100vh;
+    background:var(--navy-deep);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .page{
+    max-width:480px;
+    margin:0 auto;
+    min-height:100dvh;
+    background:
+      radial-gradient(circle at 12% 4%, rgba(244,178,58,.14), transparent 45%),
+      radial-gradient(circle at 90% 0%, rgba(244,178,58,.08), transparent 40%),
+      radial-gradient(circle at 50% 100%, rgba(19,40,73,.9), transparent 60%),
+      linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-deep) 55%, #050C18 100%);
     display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:32px 16px;
-    background:
-      radial-gradient(circle at 15% 10%, rgba(244,178,58,.16), transparent 55%),
-      radial-gradient(circle at 85% 90%, rgba(31,58,95,.5), transparent 55%),
-      var(--navy-dark);
-    color:#fff;
+    flex-direction:column;
+    padding-bottom:104px;
   }
 
-  .card{
-    position:relative;
-    width:100%;
-    max-width:400px;
-    background:linear-gradient(180deg, var(--paper) 0%, #EFEAE0 100%);
-    border-radius:28px;
-    overflow:hidden;
-    box-shadow:
-      0 40px 80px -20px rgba(0,0,0,.55),
-      0 12px 30px -8px rgba(0,0,0,.4),
-      0 0 0 1px rgba(244,178,58,.18);
-  }
-
-  .card-header{
-    background:
-      radial-gradient(circle at 20% 0%, rgba(244,178,58,.25), transparent 60%),
-      linear-gradient(160deg, var(--navy-dark), var(--navy) 90%);
-    padding:28px 24px 64px;
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:36px 24px 30px;
     text-align:center;
     position:relative;
   }
-
-  .brand-logo{
-    width:78px;
-    height:auto;
-    margin:0 auto 4px;
-    display:block;
-    filter:drop-shadow(0 6px 14px rgba(0,0,0,.35));
+  .brand-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:22px;
   }
+  .brand-logo{ width:40px; height:auto; filter:drop-shadow(0 4px 10px rgba(0,0,0,.4)); }
+  .brand-name{ font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); font-weight:600; }
 
-  .tagline{
-    font-size:10px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,.55);
-    font-weight:600;
+  .photo-ring{
+    width:132px;
+    height:132px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    padding:3px;
+    background:conic-gradient(from 220deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+    box-shadow:0 20px 46px -12px rgba(0,0,0,.65);
   }
-
-  .photo-wrap{
-    position:absolute;
-    left:50%;
-    bottom:-56px;
-    transform:translateX(-50%);
-    width:112px;
-    height:112px;
+  .photo-ring-inner{
+    width:100%;
+    height:100%;
     border-radius:50%;
     padding:4px;
-    background:linear-gradient(140deg, var(--gold-light), var(--gold-dark));
-    box-shadow:0 18px 34px -8px rgba(0,0,0,.55), 0 0 0 6px var(--paper);
+    background:var(--navy-deep);
   }
-  .photo-wrap img{
+  .photo-ring img{
     width:100%;
     height:100%;
     border-radius:50%;
     object-fit:cover;
     display:block;
-    background:#dcd6c8;
-  }
-
-  .card-body{
-    padding:68px 28px 8px;
-    text-align:center;
   }
 
   .name{
     font-family:'Playfair Display',serif;
     font-weight:800;
-    font-size:24px;
-    color:var(--navy-dark);
+    font-size:30px;
     letter-spacing:-.01em;
+    color:#fff;
+  }
+  .gold-rule{
+    width:44px;
+    height:2px;
+    margin:12px auto;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
   }
   .role{
-    margin-top:4px;
-    font-size:12px;
+    font-size:12.5px;
     font-weight:700;
-    letter-spacing:.1em;
+    letter-spacing:.12em;
     text-transform:uppercase;
-    color:var(--gold-dark);
+    color:var(--gold-light);
+  }
+  .credo{
+    margin-top:12px;
+    font-size:13.5px;
+    color:var(--muted);
+    max-width:300px;
+    margin-inline:auto;
+    line-height:1.6;
   }
 
-  .contact-list{
-    margin-top:22px;
-    display:flex;
-    flex-direction:column;
+  /* ---------- Stats ---------- */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
     gap:10px;
+    padding:0 20px 26px;
   }
-  .contact-row{
+  .stat{
+    background:linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    border:1px solid rgba(244,178,58,.16);
+    border-radius:16px;
+    padding:14px 6px;
+    text-align:center;
+  }
+  .stat-num{
+    font-family:'Playfair Display',serif;
+    font-weight:800;
+    font-size:19px;
+    color:var(--gold-light);
+  }
+  .stat-label{
+    margin-top:3px;
+    font-size:9.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* ---------- Section shell ---------- */
+  .section{ padding:6px 24px 26px; }
+  .section-label{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:10px;
+    display:block;
+  }
+  .panel{
+    background:linear-gradient(160deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:18px;
+  }
+  .bio-text{
+    font-size:13.5px;
+    line-height:1.75;
+    color:rgba(237,239,243,.82);
+  }
+  .bio-text strong{ color:#fff; }
+
+  .award-line{
+    margin-top:14px;
     display:flex;
-    align-items:center;
-    gap:12px;
-    padding:12px 14px;
-    background:#fff;
-    border:1px solid rgba(14,42,71,.08);
-    border-radius:14px;
-    text-decoration:none;
-    color:var(--navy-dark);
-    box-shadow:0 2px 0 rgba(14,42,71,.03);
-    transition:transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s cubic-bezier(.2,.8,.2,1);
+    align-items:flex-start;
+    gap:10px;
+    padding-top:14px;
+    border-top:1px solid rgba(255,255,255,.08);
   }
-  .contact-row:hover{ transform:translateY(-2px); box-shadow:0 10px 22px -8px rgba(14,42,71,.25); }
-  .contact-row:active{ transform:translateY(0); }
-  .contact-row:focus-visible{ outline:2px solid var(--gold-dark); outline-offset:2px; }
-  .contact-icon{
-    width:36px;
-    height:36px;
-    border-radius:10px;
+  .award-icon{
+    flex-shrink:0;
+    width:30px;
+    height:30px;
+    border-radius:9px;
+    background:linear-gradient(160deg, var(--gold-light), var(--gold-dark));
     display:flex;
     align-items:center;
     justify-content:center;
-    background:var(--navy-dark);
-    color:var(--gold-light);
+    color:var(--navy-deep);
+  }
+  .award-icon svg{ width:16px; height:16px; }
+  .award-text{ font-size:12.5px; line-height:1.6; color:rgba(237,239,243,.82); }
+  .award-text strong{ color:var(--gold-light); }
+
+  .chip-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .chip{
+    font-size:11.5px;
+    font-weight:600;
+    color:var(--ink);
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(244,178,58,.22);
+    padding:8px 13px;
+    border-radius:999px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-list{ display:flex; flex-direction:column; gap:10px; }
+  .contact-row{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:14px 15px;
+    background:linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:16px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:transform .18s cubic-bezier(.2,.8,.2,1), border-color .18s ease, background .18s ease;
+  }
+  .contact-row:hover{ transform:translateY(-2px); border-color:rgba(244,178,58,.4); }
+  .contact-row:active{ transform:translateY(0); }
+  .contact-row:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+  .contact-icon{
+    width:38px;
+    height:38px;
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(160deg, var(--gold-light), var(--gold-dark));
+    color:var(--navy-deep);
     flex-shrink:0;
   }
   .contact-icon svg{ width:18px; height:18px; }
   .contact-text{ text-align:left; min-width:0; }
-  .contact-label{ font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:#8A7F6C; font-weight:700; }
-  .contact-value{ font-size:14px; font-weight:600; color:var(--navy-dark); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .contact-label{ font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); font-weight:700; }
+  .contact-value{ font-size:14.5px; font-weight:600; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
   .social-row{
-    margin-top:18px;
+    margin-top:16px;
     display:flex;
     justify-content:center;
     gap:12px;
   }
   .social-btn{
-    width:44px;
-    height:44px;
+    width:46px;
+    height:46px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:var(--navy-dark);
+    background:linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+    border:1px solid rgba(244,178,58,.28);
     color:var(--gold-light);
     text-decoration:none;
-    box-shadow:0 6px 16px -4px rgba(14,42,71,.4);
-    transition:transform .18s cubic-bezier(.2,.8,.2,1), background .18s ease;
+    transition:transform .18s cubic-bezier(.2,.8,.2,1), background .18s ease, color .18s ease;
   }
-  .social-btn svg{ width:19px; height:19px; }
-  .social-btn:hover{ transform:translateY(-3px); background:var(--gold-dark); color:var(--navy-dark); }
-  .social-btn:focus-visible{ outline:2px solid var(--gold-dark); outline-offset:3px; }
+  .social-btn svg{ width:20px; height:20px; }
+  .social-btn:hover{ transform:translateY(-3px); background:linear-gradient(160deg, var(--gold-light), var(--gold-dark)); color:var(--navy-deep); }
+  .social-btn:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
 
   .company-block{
-    margin-top:24px;
-    padding-top:18px;
-    border-top:1px dashed rgba(14,42,71,.15);
+    text-align:center;
+    padding:24px 24px 6px;
   }
   .company-name{
     font-family:'Playfair Display',serif;
     font-weight:700;
     font-size:16px;
-    color:var(--navy-dark);
+    color:#fff;
   }
   .company-sub{
-    font-size:12px;
-    color:#8A7F6C;
-    margin-top:2px;
+    font-size:11.5px;
+    color:var(--muted);
+    margin-top:3px;
+    letter-spacing:.02em;
   }
 
-  .action-row{
-    margin-top:22px;
+  /* ---------- Sticky action bar ---------- */
+  .action-bar{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    display:flex;
+    justify-content:center;
+    padding:14px 20px calc(14px + env(safe-area-inset-bottom));
+    background:linear-gradient(180deg, rgba(6,15,31,0) 0%, rgba(6,15,31,.92) 28%, var(--navy-deep) 100%);
+    z-index:10;
+  }
+  .action-bar-inner{
+    width:100%;
+    max-width:440px;
     display:flex;
     gap:10px;
-    padding-bottom:26px;
   }
   .btn{
     flex:1;
@@ -203,9 +299,9 @@
     align-items:center;
     justify-content:center;
     gap:8px;
-    padding:14px 10px;
+    padding:15px 10px;
     border-radius:14px;
-    font-size:13px;
+    font-size:13.5px;
     font-weight:700;
     letter-spacing:.01em;
     text-decoration:none;
@@ -217,139 +313,183 @@
   .btn svg{ width:16px; height:16px; }
   .btn-primary{
     background:linear-gradient(160deg, var(--gold-light), var(--gold-dark));
-    color:var(--navy-dark);
-    box-shadow:0 10px 24px -8px rgba(212,148,30,.6);
+    color:var(--navy-deep);
+    box-shadow:0 12px 26px -8px rgba(212,148,30,.6);
   }
-  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -8px rgba(212,148,30,.7); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 16px 32px -8px rgba(212,148,30,.7); }
   .btn-primary:active{ transform:translateY(0); }
-  .btn-primary:focus-visible{ outline:2px solid var(--navy-dark); outline-offset:2px; }
+  .btn-primary:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
   .btn-secondary{
-    background:#fff;
-    color:var(--navy-dark);
-    border:1px solid rgba(14,42,71,.14);
+    background:rgba(255,255,255,.06);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.16);
   }
-  .btn-secondary:hover{ transform:translateY(-2px); box-shadow:0 10px 22px -8px rgba(14,42,71,.25); }
+  .btn-secondary:hover{ transform:translateY(-2px); border-color:rgba(244,178,58,.5); }
   .btn-secondary:active{ transform:translateY(0); }
-  .btn-secondary:focus-visible{ outline:2px solid var(--gold-dark); outline-offset:2px; }
+  .btn-secondary:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
 
   .footer-note{
     text-align:center;
-    font-size:11px;
-    color:rgba(255,255,255,.4);
-    margin-top:18px;
+    font-size:10.5px;
+    color:rgba(237,239,243,.32);
+    padding:4px 24px 12px;
     letter-spacing:.03em;
   }
 
-  @media (max-width:380px){
-    .card-body{ padding:64px 20px 8px; }
-    .action-row{ flex-direction:column; }
+  @media (min-width:481px){
+    body{ padding:32px 16px; }
+    .page{ min-height:auto; border-radius:28px; box-shadow:0 40px 90px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(244,178,58,.14); overflow:hidden; padding-bottom:104px; }
+    .action-bar{ position:absolute; }
+    .page{ position:relative; }
   }
 </style>
 </head>
 <body>
 
-  <div>
-    <div class="card">
-      <div class="card-header">
+  <div class="page">
+
+    <div class="hero">
+      <div class="brand-row">
         <img class="brand-logo" src="../Brand_assests/peslogo.png" alt="Practical Eduskills logo">
-        <p class="tagline">Experiential Education</p>
-        <div class="photo-wrap">
+        <span class="brand-name">Practical Eduskills</span>
+      </div>
+
+      <div class="photo-ring">
+        <div class="photo-ring-inner">
           <img src="../Brand_assests/sanmit_sir.png" alt="Sanmit Shah">
         </div>
       </div>
 
-      <div class="card-body">
-        <h1 class="name">Sanmit Shah</h1>
-        <p class="role">Founder, Practical Eduskills</p>
+      <h1 class="name">Sanmit Shah</h1>
+      <div class="gold-rule"></div>
+      <p class="role">Founder · Practical Eduskills</p>
+      <p class="credo">Building careers, not just degrees — 19+ years in experiential education.</p>
+    </div>
 
-        <div class="contact-list">
-          <a class="contact-row" href="tel:+919890036003">
-            <span class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </span>
-            <span class="contact-text">
-              <span class="contact-label">Call</span>
-              <span class="contact-value">+91 98900 36003</span>
-            </span>
-          </a>
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-num">19+</p>
+        <p class="stat-label">Years</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">2000+</p>
+        <p class="stat-label">Students</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">4</p>
+        <p class="stat-label">Global Bodies</p>
+      </div>
+    </div>
 
-          <a class="contact-row" href="mailto:sanmitshah@gmail.com">
-            <span class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" stroke="none"/><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-            </span>
-            <span class="contact-text">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">sanmitshah@gmail.com</span>
-            </span>
-          </a>
-
-          <a class="contact-row" href="https://wa.me/919890036003" target="_blank" rel="noopener noreferrer">
-            <span class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.94 9.94 0 0 0 4.84 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2h-.01a8.22 8.22 0 0 1-4.19-1.15l-.3-.18-3.09.81.82-3.01-.2-.31a8.2 8.2 0 0 1-1.26-4.4c0-4.55 3.71-8.26 8.27-8.26a8.22 8.22 0 0 1 8.24 8.27c0 4.55-3.71 8.23-8.28 8.23zm4.53-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
-            </span>
-            <span class="contact-text">
-              <span class="contact-label">WhatsApp</span>
-              <span class="contact-value">+91 98900 36003</span>
-            </span>
-          </a>
-        </div>
-
-        <div class="social-row">
-          <a class="social-btn" href="https://www.instagram.com/sanmit_shahofficial/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a class="social-btn" href="https://www.linkedin.com/in/sanmit-shah-51690a21/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.5h4.53V23H.24V8.5zM8.02 8.5h4.34v1.98h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.53v-6.98c0-1.67-.03-3.81-2.32-3.81-2.33 0-2.69 1.82-2.69 3.7V23H8.02V8.5z"/></svg>
-          </a>
-          <a class="social-btn" href="https://www.youtube.com/@sanmit_shah" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 3 12 3 12 3h-.01s-4.9 0-8.2.14c-.46.05-1.46.06-2.36 1C.63 4.86.4 6.5.4 6.5S.16 8.42.16 10.35v1.8c0 1.93.24 3.85.24 3.85s.23 1.64.94 2.36c.9.95 2.08.92 2.6 1.02 1.9.18 8.06.24 8.06.24s4.9-.01 8.2-.15c.46-.06 1.46-.06 2.36-1 .7-.72.94-2.36.94-2.36s.24-1.92.24-3.85v-1.8c0-1.93-.24-3.85-.24-3.85zM9.55 14.75v-6.1l6.27 3.06-6.27 3.04z"/></svg>
-          </a>
-        </div>
-
-        <div class="company-block">
-          <p class="company-name">Practical Eduskills</p>
-          <p class="company-sub">Yogah Karmasu Kaushalam</p>
-        </div>
-
-        <div class="action-row">
-          <button class="btn btn-primary" id="saveContactBtn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Save Contact
-          </button>
-          <button class="btn btn-secondary" id="shareBtn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            Share
-          </button>
+    <div class="section">
+      <span class="section-label">About</span>
+      <div class="panel">
+        <p class="bio-text">
+          Sanmit Shah is an educator and entrepreneur with <strong>19+ years of experience</strong>. His journey began with a simple belief that education should prepare students for real careers, not just exams — leading him to build <strong>Practical EduSkills</strong>, focused on practical, industry-ready learning that has transformed <strong>2000+ students</strong> so far.
+        </p>
+        <div class="award-line">
+          <span class="award-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9.5 13.5 7 22l5-3 5 3-2.5-8.5"/></svg>
+          </span>
+          <p class="award-text">During COVID-19, he received two awards for extraordinary contribution to education, including the <strong>Yuva Warrior Award</strong>, presented by the Hon'ble Home Minister of Maharashtra.</p>
         </div>
       </div>
     </div>
+
+    <div class="section">
+      <span class="section-label">Affiliations</span>
+      <div class="chip-row">
+        <span class="chip">BNI</span>
+        <span class="chip">Rotary International</span>
+        <span class="chip">GMBF Global</span>
+        <span class="chip">NSDC</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">Connect</span>
+      <div class="contact-list">
+        <a class="contact-row" href="tel:+919890036003">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">Call</span>
+            <span class="contact-value">+91 98900 36003</span>
+          </span>
+        </a>
+
+        <a class="contact-row" href="mailto:sanmitshah@gmail.com">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">sanmitshah@gmail.com</span>
+          </span>
+        </a>
+
+        <a class="contact-row" href="https://wa.me/919890036003" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.94 9.94 0 0 0 4.84 1.23h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2h-.01a8.22 8.22 0 0 1-4.19-1.15l-.3-.18-3.09.81.82-3.01-.2-.31a8.2 8.2 0 0 1-1.26-4.4c0-4.55 3.71-8.26 8.27-8.26a8.22 8.22 0 0 1 8.24 8.27c0 4.55-3.71 8.23-8.28 8.23zm4.53-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+          </span>
+          <span class="contact-text">
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">+91 98900 36003</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="social-row">
+        <a class="social-btn" href="https://www.instagram.com/sanmit_shahofficial/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a class="social-btn" href="https://www.linkedin.com/in/sanmit-shah-51690a21/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.5h4.53V23H.24V8.5zM8.02 8.5h4.34v1.98h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.53v-6.98c0-1.67-.03-3.81-2.32-3.81-2.33 0-2.69 1.82-2.69 3.7V23H8.02V8.5z"/></svg>
+        </a>
+        <a class="social-btn" href="https://www.youtube.com/@sanmit_shah" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 3 12 3 12 3h-.01s-4.9 0-8.2.14c-.46.05-1.46.06-2.36 1C.63 4.86.4 6.5.4 6.5S.16 8.42.16 10.35v1.8c0 1.93.24 3.85.24 3.85s.23 1.64.94 2.36c.9.95 2.08.92 2.6 1.02 1.9.18 8.06.24 8.06.24s4.9-.01 8.2-.15c.46-.06 1.46-.06 2.36-1 .7-.72.94-2.36.94-2.36s.24-1.92.24-3.85v-1.8c0-1.93-.24-3.85-.24-3.85zM9.55 14.75v-6.1l6.27 3.06-6.27 3.04z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="company-block">
+      <p class="company-name">Practical Eduskills</p>
+      <p class="company-sub">योगः कर्मसु कौशलम् · Experiential Education</p>
+    </div>
+
     <p class="footer-note">© Practical Eduskills — Sanmit Shah</p>
+
+    <div class="action-bar">
+      <div class="action-bar-inner">
+        <a class="btn btn-primary" id="saveContactBtn" download="Sanmit_Shah.vcf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Save Contact
+        </a>
+        <button class="btn btn-secondary" id="shareBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share
+        </button>
+      </div>
+    </div>
+
   </div>
 
 <script>
-  document.getElementById('saveContactBtn').addEventListener('click', function () {
-    var vcard = [
-      'BEGIN:VCARD',
-      'VERSION:3.0',
-      'N:Shah;Sanmit;;;',
-      'FN:Sanmit Shah',
-      'ORG:Practical Eduskills',
-      'TITLE:Founder',
-      'TEL;TYPE=CELL:+919890036003',
-      'EMAIL:sanmitshah@gmail.com',
-      'URL:https://www.instagram.com/sanmit_shahofficial/',
-      'END:VCARD'
-    ].join('\n');
-    var blob = new Blob([vcard], { type: 'text/vcard' });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url;
-    a.download = 'Sanmit_Shah.vcf';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  });
+  var vcard = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'N:Shah;Sanmit;;;',
+    'FN:Sanmit Shah',
+    'ORG:Practical Eduskills',
+    'TITLE:Founder',
+    'TEL;TYPE=CELL:+919890036003',
+    'EMAIL:sanmitshah@gmail.com',
+    'URL:https://www.instagram.com/sanmit_shahofficial/',
+    'END:VCARD'
+  ].join('\r\n');
+  document.getElementById('saveContactBtn').href =
+    'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
 
   document.getElementById('shareBtn').addEventListener('click', function () {
     var shareData = {
